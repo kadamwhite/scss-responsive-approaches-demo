@@ -1,0 +1,21 @@
+{
+  "name": "sass-responsive-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "sass": "gulp sass",
+    "sass:watch": "gulp sass:watch",
+    "prestart": "gulp",
+    "start": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "serve": "^1.4.0"
+  }
+}

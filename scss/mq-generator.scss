@@ -1,0 +1,105 @@
+@import './_common';
+
+
+
+.report-column,
+.report-column-header,
+.report-subheader,
+.report-column-footer {
+  &:first-child {
+    padding-left: rem( 20px );
+  }
+}
+
+/* MEDIA QUERY CLASS GENERATOR */
+/* =========================== */
+
+@mixin mq-class-generator($class){
+
+  .#{$class}-none{
+    display: none;
+  }
+
+  .#{$class}-block{
+    display: block;
+  }
+
+  .#{$class}-inline-block{
+    display: inline-block;
+  }
+
+  .#{$class}-table{
+    display: table;
+  }
+
+  .col-#{$class}-25{
+    width: 25%;
+  }
+
+  .col-#{$class}-50{
+    width: 50%;
+  }
+
+  .col-#{$class}-75{
+    width: 75%;
+  }
+
+  .col-#{$class}-100{
+    width: 100%;
+  }
+
+  .col-#{$class}-25,
+  .col-#{$class}-50,
+  .col-#{$class}-75,
+  .col-#{$class}-100{
+    display: inline-block;
+  }
+}
+
+/* MEDIA MIXINS */
+/* ============ */
+
+@mixin media-small {
+  @media (min-width:480px) {
+    @content;
+  }
+}
+
+@mixin media-medium {
+  @media (min-width:640px) {
+    @content;
+  }
+}
+
+@mixin media-extra-medium {
+  @media (min-width:768px) {
+    @content;
+  }
+}
+
+@mixin media-large {
+  @media (min-width:1024px) {
+    @content;
+  }
+}
+
+/* DEFINITION OF MEDIA QUERIES FOR COLUMNS */
+/* ======================================= */
+
+@include mq-class-generator(xs);
+
+@include media-small {
+  @include mq-class-generator(s);
+}
+
+@include media-medium {
+  @include mq-class-generator(m);
+}
+
+@include media-extra-medium {
+  @include mq-class-generator(xm);
+}
+
+@include media-large {
+  @include mq-class-generator(l);
+}

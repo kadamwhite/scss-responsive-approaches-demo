@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <title>Sass demo</title>
+  <link rel="stylesheet" href="/css/mq-generator.css">
+</head>
+<body>
+  Benefit: extremely explicit classes and pretty readable markup. Drawback: very duplicative markup, and creating a one-time-use grid system.
+  <h3 class="report-subheader">Tracking Summary</h3>
+  <section class="report-section"><!--NoWS
+    --><div class="report-column col-xs-50">Pending Approval</div><!--NoWS
+    --><div class="report-column report-number col-xs-50">129.00 USD</div><!--NoWS
+  --></section>
+  <section class="report-section"><!--NoWS
+    --><div class="report-column col-xs-50">Approved</div><!--NoWS
+    --><div class="report-column report-number col-xs-50">78.89 USD</div><!--NoWS
+  --></section>
+  <section class="report-section"><!--NoWS
+    --><div class="report-column col-xs-50">Paid</div><!--NoWS
+    --><div class="report-column report-number col-xs-50">99.99 USD</div><!--NoWS
+  --></section>
+
+  <!-- START Payment Date for mobile portrait -->
+
+  <article class="report-summary xs-block m-none">
+    <h3 class="report-subheader">Payment Data</h3>
+
+    <section class="report-header"><!--NoWS
+      --><div class="report-column-header col-xs-50">Date</div><!--NoWS
+      --><div class="report-column-header col-xs-50 report-number">Amt(USD)</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50">06/09/2015</div><!--NoWS
+      --><div class="report-column col-xs-50 report-number">1000.00</div><!--NoWS
+    --></section>
+    <section class="report-header"><!--NoWS
+      --><div class="report-column-header col-xs-50">Bank ID</div><!--NoWS
+      --><div class="report-column-header col-xs-50 report-number">Check #</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50">CASH ADV</div><!--NoWS
+      --><div class="report-column col-xs-50 report-number">#408</div><!--NoWS
+    --></section>
+
+    <div class="report-divider"></div>
+
+    <section class="report-header"><!--NoWS
+      --><div class="report-column-header col-xs-50">Date</div><!--NoWS
+      --><div class="report-column-header col-xs-50 report-number">Amt(USD)</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50">12/09/2015</div><!--NoWS
+      --><div class="report-column col-xs-50 report-number">123.76</div><!--NoWS
+    --></section>
+    <section class="report-header"><!--NoWS
+      --><div class="report-column-header col-xs-50">Bank ID</div><!--NoWS
+      --><div class="report-column-header col-xs-50 report-number">Check #</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50">CASH ADV</div><!--NoWS
+      --><div class="report-column col-xs-50 report-number">#602</div><!--NoWS
+    --></section>
+  </article>
+
+  <!-- END Payment Data for mobile portrait -->
+  <!-- START Payment Data for mobile landscape and up -->
+
+  <article class="report-summary xs-none m-block">
+    <h3 class="report-subheader">Payment Data</h3>
+
+    <section class="report-header"><!--NoWS
+      --><div class="report-column-header col-xs-25">Date</div><!--NoWS
+      --><div class="report-column-header col-xs-25">Bank ID</div><!--NoWS
+      --><div class="report-column-header col-xs-25 report-number">Check #</div><!--NoWS
+      --><div class="report-column-header col-xs-25 report-number">Amt(USD)</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25">06/09/2015</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25">CASH ADV</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25 report-number">#408</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25 report-number">1000.00</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25">12/09/2015</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25">CASH ADV</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25 report-number">#602</div><!--NoWS
+      --><div class="report-column col-xs-50 col-m-25 report-number">123.76</div><!--NoWS
+    --></section>
+  </article>
+</body>
+</html>

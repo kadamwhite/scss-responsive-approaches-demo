@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <title>Sass demo</title>
+  <link rel="stylesheet" href="/css/respond-to.css">
+</head>
+<body>
+  Benefit: more semantic classes, less SCSS (80% as many generated styles as the other approach), less markup duplication. Drawback: still <em>some</em> markup duplication, a few more complex CSS selectors required
+  <article class="report-summary report-2col">
+    <h3 class="report-subheader">Tracking Summary</h3>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column">Pending Approval</div><!--NoWS
+      --><div class="report-column report-number">129.00 USD</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column">Approved</div><!--NoWS
+      --><div class="report-column report-number">78.89 USD</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="report-column">Paid</div><!--NoWS
+      --><div class="report-column report-number">99.99 USD</div><!--NoWS
+    --></section>
+  </article>
+
+  <article class="report-summary report-4col">
+    <h3 class="report-subheader">Payment Data</h3>
+
+    <section class="report-header hide-below-m"><!--NoWS
+      --><div class="report-column-header">Date</div><!--NoWS
+      --><div class="report-column-header">Bank ID</div><!--NoWS
+      --><div class="report-column-header report-number">Check #</div><!--NoWS
+      --><div class="report-column-header report-number">Amt(USD)</div><!--NoWS
+    --></section>
+    <section class="report-section"><!--NoWS
+      --><div class="hide-above-s report-column-header">Date</div><!--NoWS
+      --><div class="hide-above-s report-column-header">Bank ID</div><!--NoWS
+      --><div class="report-column">06/09/2015</div><!--NoWS
+      --><div class="report-column">CASH ADV</div><!--NoWS
+
+      --><div class="hide-above-s report-column-header">Check #</div><!--NoWS
+      --><div class="hide-above-s report-column-header">Amt(USD)</div><!--NoWS
+      --><div class="report-column report-number">#408</div><!--NoWS
+      --><div class="report-column report-number">1000.00</div><!--NoWS
+    --></section>
+    <div class="report-divider"></div>
+    <section class="report-section"><!--NoWS
+      --><div class="hide-above-s report-column-header">Date</div><!--NoWS
+      --><div class="hide-above-s report-column-header">Bank ID</div><!--NoWS
+      --><div class="report-column">12/09/2015</div><!--NoWS
+      --><div class="report-column">CASH ADV</div><!--NoWS
+
+      --><div class="hide-above-s report-column-header">Check #</div><!--NoWS
+      --><div class="hide-above-s report-column-header">Amt(USD)</div><!--NoWS
+      --><div class="report-column report-number">#602</div><!--NoWS
+      --><div class="report-column report-number">123.76</div><!--NoWS
+    --></section>
+  </article>
+</body>
+</html>

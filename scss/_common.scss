@@ -1,0 +1,88 @@
+/* colors */
+$dk-grey: #444;
+
+/* Borrowed mixins */
+$em-base: 16px;
+
+@function strip-units( $val ) {
+  @return ( $val / ( $val * 0 + 1 ) );
+}
+
+// Convert pixels to rems e.g. for a relational value of 12px write rem( 12 )
+@function rem( $pxval ) {
+  @if not unitless( $pxval ) {
+    $pxval: strip-units( $pxval );
+  }
+  $base: $em-base;
+  @if not unitless( $base ) {
+    $base: strip-units( $base );
+  }
+  @return ( $pxval / $base ) * 1rem;
+}
+
+/* non-positional element markup */
+
+html {
+  font-size: $em-base;
+  font-family: 'Lucida Grande', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.report-column,
+.report-column-header,
+.report-subheader,
+.report-column-footer {
+  vertical-align: middle;
+  padding-right: rem( 20px );
+  padding-left: rem( 20px );
+}
+
+.report-column,
+.report-column-header,
+.report-column-footer {
+  font-size: 1rem;
+  padding-top: rem( 15px );
+}
+
+.report-column,
+.report-column-footer {
+  padding-bottom: rem( 15px );
+}
+
+.report-number {
+  text-align: right;
+}
+
+.report-column-header {
+  display: inline-block;
+  font-size: rem( 12px );
+  font-weight: bold;
+  color: $dk-grey;
+  text-transform: uppercase;
+}
+
+.report-column {
+  font-size: rem( 14px );
+  font-weight: normal;
+  color: $dk-grey;
+}
+
+.report-column-footer {
+  font-weight: bold;
+}
+
+.report-divider {
+  border-bottom: 1px solid #aaa;
+  margin-top: rem( 5px );
+  margin-bottom: rem( 5px );
+}
+
+.report-subheader {
+  color: white;
+  background-color: $dk-grey;
+  padding-top: rem( 5px );
+  padding-bottom: rem( 5px );
+}

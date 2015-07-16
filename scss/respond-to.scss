@@ -1,0 +1,108 @@
+@import './_common';
+
+/* BREAKPOINTS */
+/* =========== */
+
+$small: 480px;
+$medium: 640px;
+$medium-well: 768px;
+$large: 1024px;
+
+/* RESPONSIVE MIXIN */
+/* ================ */
+
+// The original respond-to block mixin, adapted to our breakpoints
+/*
+@mixin respond-to($media) {
+  @if $media == xs {
+    @content;
+  }
+  @else if $media == s {
+    @media only screen and (min-width: $small + 1) and (max-width: $medium - 1) { @content; }
+  }
+  @else if $media == m {
+    @media only screen and (min-width: $medium) and (max-width: $medium-well - 1) { @content; }
+  }
+  @else if $media == mw {
+    @media only screen and (min-width: $medium-well) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == l {
+    @media only screen and (min-width: $large) { @content; }
+  }
+}
+*/
+
+// Two variants of respond-to that we have found to be more broadly useful
+
+@mixin respond-below($media) {
+  @if $media == xs {
+    @content;
+  }
+  @else if $media == s {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == m {
+    @media only screen and (max-width: $medium) { @content; }
+  }
+  @else if $media == mw {
+    @media only screen and (max-width: $medium-well) { @content; }
+  }
+  @else if $media == l {
+    @media only screen and (max-width: $large) { @content; }
+  }
+}
+
+@mixin respond-above($media) {
+  @if $media == xs {
+    @media only screen and (min-width: $small) { @content; }
+  }
+  @else if $media == s {
+    @media only screen and (min-width: $medium) { @content; }
+  }
+  @else if $media == m {
+    @media only screen and (min-width: $medium-well) { @content; }
+  }
+  @else if $media == mw {
+    @media only screen and (min-width: $large) { @content; }
+  }
+}
+
+/* DEFINITION OF MEDIA QUERIES FOR COLUMNS */
+
+.hide-below-m { @include respond-below( m ) { display: none; } }
+.hide-above-s { @include respond-above( s ) { display: none; } }
+
+.report-column {
+  display: inline-block;
+}
+
+.report-2col {
+  .report-column {
+    width: 50%;
+  }
+}
+
+.report-4col {
+  .report-column-header,
+  .report-column {
+    width: 25%;
+    @include respond-below(m) { width: 50% }
+  }
+
+  .report-header {
+    @include respond-below( m ) { display: none; }
+  }
+
+  .report-section .report-column-header {
+    @include respond-above( s ) { display: none; }
+  }
+
+  .report-number {
+    @include respond-below( m ) { text-align: left; }
+  }
+
+  .report-column + .report-column,
+  .report-column-header + .report-column-header {
+    @include respond-below( m ) { text-align: right; }
+  }
+}
