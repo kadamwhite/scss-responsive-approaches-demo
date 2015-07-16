@@ -97,12 +97,11 @@ $large: 1024px;
     @include respond-above( s ) { display: none; }
   }
 
-  .report-number {
-    @include respond-below( m ) { text-align: left; }
-  }
-
-  .report-column + .report-column,
-  .report-column-header + .report-column-header {
-    @include respond-below( m ) { text-align: right; }
+  .report-column,
+  .report-column-header {
+    @include respond-below( m ) {
+      &:nth-child(2n+1) { text-align: left; }
+      &:nth-child(2n) { text-align: right; }
+    }
   }
 }
