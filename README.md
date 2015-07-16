@@ -10,4 +10,4 @@ Two options for responsive tabular display without SCSS
 1. Download the repo and navigate to the repo's root folder in the terminal
 2. Run `npm install` to install the build dependencies
 3. Run `npm start` to compile the SCSS and start a local server
-4. Navigate to [http://localhost:3000](http://localhost:3000) to see the two demo pages
+4. Navigate to [kadamwhite.github.io/scss-responsive-approaches-demo/](http://kadamwhite.github.io/scss-responsive-approaches-demo/) to see the two demo pages
